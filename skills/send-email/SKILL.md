@@ -8,11 +8,11 @@ by an AI key pair. If `send_email` reports the mail channel is missing, follow
 "If a channel is not ready" in get-started; do not ask for keys. For bulk email
 to a list, use the campaigns skill.
 
-Before `send_email`, read `get_mail_options` and `get_mail_credit`. Use the
-reported default sender unless the user asked for another. If there is no single
-default, show the returned senders and let the user pick, then pass its
-`sender_id`. Do not ask the user to type a From address before reading options;
-never invent an address or create a sender.
+`send_email` needs no sender: leave out `mail_from` and `sender_id` and the
+account's default sender is used; the result reports it. Pass `sender_id` or
+`mail_from` only when the user asked for a particular sender, choosing from
+`get_mail_options`. Check `get_mail_credit` first. Do not ask the user to type a
+From address; never invent an address or create a sender.
 
 | Capability | Workflow |
 | --- | --- |

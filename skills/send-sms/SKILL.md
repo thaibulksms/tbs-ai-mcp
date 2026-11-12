@@ -36,14 +36,16 @@ An ambiguous timezone/date requires clarification before sending. If the user
 selects STANDARD billing, `send_sms.force` is `standard`; CORPORATE is `corporate`.
 Omitted force follows the existing account setting; never silently switch balances.
 
-Before a direct `send_sms`, read `get_sms_options` for approved senders by credit
-type, configured defaults and approved templates. Pass `sender` or `sender_id`,
-and either `message` or `template_id` with exactly its named `template_values`
-(for example `{"OTPNUMBER":"1234","OTPTIME":"5"}`). A message and a template
-are mutually exclusive. Omit the sender only when the chosen credit type has a
-configured default. A grouped `sender_id` also needs an explicit `force`; the
-choice never changes billing implicitly. Review the resulting content and
-credit before sending. To add or change senders or templates, use the dashboard
+A direct `send_sms` needs only recipients and either `message` or `template_id`
+with exactly its named `template_values` (for example
+`{"OTPNUMBER":"1234","OTPTIME":"5"}`); a message and a template are mutually
+exclusive. `sender`, `sender_id` and `force` are optional. Leave them out and the
+account's default credit type and default sender are used; the result reports
+both. Pass `sender` or `sender_id` only when the user named a sender, and
+`force` only when they chose a credit type. `get_sms_options` shows the
+defaults and the approved choices; read it when the user wants to choose, not
+as a required step. Tell the user which sender and credit type will be used,
+and review the content and credit before sending. To add or change senders or templates, use the dashboard
 skill.
 
 Generate one random UUID v4 `operation_id` for the intended `send_sms` and retain it across
