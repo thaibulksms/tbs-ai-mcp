@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "thaibulksms": {
+      "type": "http",
+      "url": "https://ai.thaibulksms.com/mcp"
+    }
+  }
+}

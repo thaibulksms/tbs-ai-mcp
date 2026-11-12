@@ -1,0 +1,24 @@
+{
+  "name": "thaibulksms",
+  "version": "1.0.10",
+  "description": "Use ThaiBulkSMS account, campaign, SMS, OTP and email tools within your connected permissions.",
+  "author": {
+    "name": "ThaiBulkSMS"
+  },
+  "homepage": "https://ai.thaibulksms.com",
+  "icon": "./assets/icon-1024.png",
+  "documentationUrl": "https://ai.thaibulksms.com",
+  "supportUrl": "https://www.thaibulksms.com/contact-us/",
+  "privacyPolicyUrl": "https://ai.thaibulksms.com/privacy",
+  "termsOfServiceUrl": "https://ai.thaibulksms.com/terms",
+  "displayName": "ThaiBulkSMS",
+  "repository": "https://github.com/thaibulksms/tbs-ai-mcp",
+  "license": "MIT",
+  "keywords": [
+    "sms",
+    "otp",
+    "email",
+    "thailand",
+    "messaging"
+  ]
+}

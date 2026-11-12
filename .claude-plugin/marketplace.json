@@ -1,0 +1,14 @@
+{
+  "name": "thaibulksms",
+  "description": "ThaiBulkSMS plugin: SMS, OTP and email for your assistant",
+  "owner": {
+    "name": "ThaiBulkSMS"
+  },
+  "plugins": [
+    {
+      "name": "thaibulksms",
+      "source": "./",
+      "description": "Use ThaiBulkSMS account, campaign, SMS, OTP and email tools within your connected permissions."
+    }
+  ]
+}
